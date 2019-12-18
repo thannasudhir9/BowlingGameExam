@@ -32,15 +32,15 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void spareFollowedByThree() {
-        gameObj.roll(5, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        assertEquals(gameObj.getScore(), 16);
+    public void spareFollowedByNextElementScore() {
+        gameObj.roll(5, 5, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        assertEquals(gameObj.getScore(), 18);
     }
 
     @Test
-    public void strikeFollowedByThrees() {
-        gameObj.roll(10, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        assertEquals(gameObj.getScore(), 22);
+    public void strikeFollowedByNextTwoScores() {
+        gameObj.roll(10, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        assertEquals(gameObj.getScore(), 26);
     }
 
     @Test
